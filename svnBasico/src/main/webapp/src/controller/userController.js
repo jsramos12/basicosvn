@@ -24,7 +24,7 @@
             model.lastName + " nacio el " + model.bornDate;
         },
         cancel: function(){
-            a = "No ha guardado la informacion del usuario";
+            a = "No ha guardado la informacion del usuario" + Math.random();
             alert(a);
         },
         _renderEdit: function() {
