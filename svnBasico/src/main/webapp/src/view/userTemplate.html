@@ -1,0 +1,32 @@
+<script type='text/template' id='user'>
+    <div class='form-group'>
+        <form role='form' id='userForm'>
+ 
+            <div class='form-group' >
+                <label for='firstName'>Nombres</label>
+                <input type='text' class='form-control' id='firstName' name='firstName' placeholder='Enter value' value='<%= user.get('firstName') %>'/>	
+            </div>
+ 
+            <div class='form-group' >
+                <label for='lastName'>Apellidos</label>
+                <input type='text' class='form-control' id='lastName' name='lastName' placeholder='Enter value' value='<%= user.get('lastName') %>'/>	
+            </div>
+    
+      
+            <div class='form-group'>
+                <label for='fecha'>Fecha de nacimiento</label>
+               
+            
+            <input class="datepicker" class='form-control' data-date-format="dd-mm-yyyy" id='bornDate' name = 'bornDate' placeholder='Enter value'>
+             <span class="add-on"><i class="icon-th"></i></span>
+            </div>
+    
+            <div class ='form-group'>
+                <div id ='nuevoId'></div>
+            </div>
+					    
+            <a onclick="Backbone.trigger('user-save'); return false" >Guardar</a> |
+            <a onclick="Backbone.trigger('user-cancel'); return false" >Cancelar</a> |
+        </form>
+    </div>
+</script>
